@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///frontend/index.sass"],"names":[],"mappings":"AAAA;EACE;CACD","file":"./assets/styles.css","sourcesContent":["body {\n  color: grey; }\n\n\n\n// WEBPACK FOOTER //\n// webpack:///frontend/index.sass"],"sourceRoot":""}

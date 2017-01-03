@@ -1,0 +1,52 @@
+{
+  "name": "Knubisoft",
+  "version": "1.0.0",
+  "description": "Knubisoft project ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "gulp",
+    "compass": "gem install compass"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "author": "Knubisoft",
+  "license": "ISC",
+  "homepage": "",
+  "devDependencies": {
+    "babel": "^6.5.2",
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "latest",
+    "babel-plugin-transform-react-jsx": "^6.8.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-es2016": "^6.16.0",
+    "babel-preset-es2017": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "css-loader": "^0.26.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.9.0",
+    "html-webpack-plugin": "^2.24.1",
+    "jade": "^1.11.0",
+    "jade-html-loader": "0.0.3",
+    "jade-loader": "^0.8.0",
+    "jsx-webpack-loader": "^0.1.2",
+    "node-sass": "^4.1.1",
+    "raw-loader": "^0.5.1",
+    "react": "^15.4.1",
+    "react-dom": "^15.4.1",
+    "react-loader": "^2.4.0",
+    "resolve-url-loader": "^1.6.0",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.14.0",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "jquery": "^3.1.1"
+  },
+  "keywords": []
+}

@@ -8,4 +8,160 @@ html(lang='ru')
       h1 Test analytics capture
       button.btn.btn-reload reload
       .virtual-dom#virtual-dom
+      button.start Recording
+      button.stop Stop recording
+      button.play Play
+      .wrapper-areas
+        .test-parse-wraper#test-parse-wraper
+          div
+            header
+              .head-part
+                .head-part__wrap.wrapper-page
+                  .head-part__phone-wrap
+                    .head-part__phone
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                  address.head-part__address  Харьков,Пер. Костюринский, 1
+              .head-basic
+                h1.head-basic__title КОМФОРТНЫЕ И УЮТНЫЕ ПЛАНИРОВКИ В кирпичном ДОМЕ.!
+                h2.head-basic__sub-head ИДЕАЛЬНОЕ МЕСТО ДЛЯ СЕМЕЙНОЙ ЖИЗНИ!
+                h3.head-basic__sub-title Успейте выбрать квартиру!
+                form.head-basic__form(action='#', name='callback')
+                  input.head-basic__fill-phone(type='phone', placeholder='+380 _ _ _ - _ _ - _ _')
+                  .head-basic__send-btn-wrap
+                    input.head-basic__submit-btn.btn.btn--light(type='submit', value='Жду Звонока')
+            main
+            section.advantages
+              h2.advantages__title.title Записывайтесь на просмотр прямо сейчас!
+              .advantages__wrap.wrapper-page
+                h3.advantages__title-section.title-section.title-line Преимущества ЖК "Пушкин"
+                .advantages__list
+                  .advantages__item
+                    .advantages__image-border
+                      .advantages__image-wrap
+                    h5.advantages__item-title Инфраструктура
+                    p.advantages__description
+                      | Рядом с жилым комплексом расположены: детские сады, школы, университеты, магазины, торговый центр, банки и кафе.
+                  .advantages__item
+                    .advantages__image-border
+                      .advantages__image-wrap
+                    h5.advantages__item-title Технологии
+                    p.advantages__description
+                      | Утепленный фасад здания, новые коммуникации, 100% ж/б перекрытие- мы все сделали для Вашего комфорта.
+                  .advantages__item
+                    .advantages__image-border
+                      .advantages__image-wrap
+                    h5.advantages__item-title Охраняемая территория
+                    p.advantages__description
+                      | На закрытой охраняемой территории вы можете быть спокойны за безопасный досуг ваших детей.
+                  .advantages__item
+                    .advantages__image-border
+                      .advantages__image-wrap
+                    h5.advantages__item-title Индивидуальные планировки
+                    p.advantages__description Мы  учли практически все пожелания будущих владельцев квартир.
+            section.learn-more
+              h2.learn-more__title.title Узнай больше прямо сейчас!
+              .learn-more__btn-wrap
+                a.learn-more__btn.btn(href='#') Заказать звонок
+            section.description.wrapper-page
+              p.description__text
+                | ЖК “Пушкин” расположился   в самом  центре города - 3 мин. от с. М. Советская, 7 мин. М. Архитектора  Бекетова.  Удобное расположение жилого комплекса  неподалеку  от  метро и остановок общественного транспорта, а также делового центра  города, создает идеальное сочетание для жизни в мегаполисе.
+                | Придомовая территория обустроена интересными детскими и игровыми площадками, а зеленые участки позволят Вашим детям в любой момент соприкоснуться с природой, просто выйдя из дому.
+                | Ухоженные газоны и парковые дорожки превращают городские будни в загородный отдых.
+                | Мы уверены, что жилой комплекс придется Вам по душе, ведь строится согласно современным строительным нормам.
+                | Вы можете рассматривать множество вариантов покупки, но только в ЖК «Пушкин» мы предлагаем приобрести Вам счастливое будущее Вашей семьи.
+              .description__img-wrap
+            section.callback
+              h2.callback__title.title Живи в Жк “Пушкин”!
+              from.callback__form
+                .callback__wrap-input
+                  input.callback__input(placeholder='Иванов Иван')
+                  input.callback__input(placeholder='+380(67)8838962')
+                .callback__wrap-btn
+                  input.callback__submit.btn.btn--shadow(type='submit', value='Жду звонка')
+            section.comfortable-layout.wrapper-page
+              h2.comfortable-layout__title.title-section.title-line Планировки
+              .comfortable-layout__wrap
+                .comfortable-layout__inform Вашему вниманию лучшие планировки уютных 1-х квартир в нашем жилом комплексе.
+                .comfortable-layout__content
+                  .comfortable-layout__item
+                    .comfortable-layout__wrapper-images
+                    .comfortable-layout__description Общая площадь -20м2
+                  .comfortable-layout__item
+                    .comfortable-layout__wrapper-images
+                    .comfortable-layout__description Общая площадь -20м2
+                  .comfortable-layout__item
+                    .comfortable-layout__wrapper-images
+                    .comfortable-layout__description Общая площадь -20м2
+            section.gallery-project
+              h2.gallery-project__title.title-line.title-section.wrapper-page Галерея Проекта
+              .gallery-project__wrap.wrapper-page
+                .gallery-project__slider.slider.hide
+                  .slider__item(data-index='0')
+                    .slider__hover-state
+                      .slider__hover-icon +
+                  .slider__item(data-index='1')
+                    .slider__hover-state
+                      .slider__hover-icon +
+                  .slider__item(data-index='2')
+                    .slider__hover-state
+                      .slider__hover-icon +
+                  .slider__item(data-index='3')
+                    .slider__hover-state
+                      .slider__hover-icon +
+                  .slider__item(data-index='4')
+                    .slider__hover-state
+                      .slider__hover-icon +
+                  .slider__item(data-index='5')
+                    .slider__hover-state
+                      .slider__hover-icon +
+            section.this-interesting.wrapper-page
+              h2.this-interesting__title.title-section.title-line Ход строительства
+              .this-interesting__video
+            section.address
+              .address__wrap.wrapper-page
+                h2.address__title.title-section.title-line Контакты
+                .address__content
+                  .address__item
+                    .address__icon.icon-location
+                    .address__title Адресс
+                    .address__value Г.Харьков, Пер. Костюринскийб 1
+                  .address__item
+                    .address__icon.icon-phone
+                    .address__title Телефон
+                    .address__value.address__value--accent 0637720111
+                  .address__item
+                    .address__icon.icon-mail-alt
+                    .address__title E-Mail
+                    .address__value info@stroycity.com
+            #map.address__maps
+            section.enroll-review.wrapper-page
+              h2.enroll-review__title Записаться на просмотр
+              from.enroll-review__wrap-input
+                input.enroll-review__input(placeholder='Иванов Иван')
+                input.enroll-review__input(placeholder='+380(67)8838962')
+                .enroll-review__wrap-btn
+                  input.enroll-review__submit.btn.btn--dangerous(type='submit', value='Жду звонка')
+            footer
+              .head-part
+                .head-part__wrap.wrapper-page
+                  .head-part__phone-wrap
+                    .head-part__phone
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                      a.head-part__item-phone(href='tel:0637720111') +38 063 772 01 11
+                  a.head-part__logo
+                  address.head-part__address  Харьков,Пер. Костюринский, 1
+            .callback-form.pop-up-background.hide
+              .callback-form__wrap-wind
+                h2.callback-form__title Мы перезвоним вам
+                form.callback-form__form
+                  label.callback-form__label(for='input-number') Введите номер телефона
+                  input#input-number.callback-form__input(type='phone', placeholder='+380(67)8838962')
+                  .callback-form__center-btn
+                    input.callback-form__submit(type='submit', value='Жду звонка')
+                a.callback-form__close-btn(href='#') ×
+        .test-parse-wraper#test-parse-play
+
 

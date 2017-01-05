@@ -1,5 +1,7 @@
 'use strict';
 
+import {parse, stringify} from 'html-parse-stringify';
+
 /** @jsx h */
 
 function start() {
@@ -14,6 +16,7 @@ function start() {
       <ul className='list' style='list-style: none'>
         <li>item 1</li>
         <li>item 2</li>
+        <li>item3</li>
       </ul>
       <input type='checkbox' checked={true}/>
     </div>
@@ -26,6 +29,12 @@ function start() {
         <li className="Hello">Hello</li>
       </ul>
       <input type='checkbox' checked={false}/>
+      <div>
+        <div className="area">
+          <h1>Text Node</h1>
+          <button className="btn">Click me</button>
+        </div>
+      </div>
     </div>
   );
 
@@ -99,6 +108,8 @@ function start() {
   }
 
   function changed(node1, node2) {
+    const test = typeof node1 !== typeof node2 || typeof node1 === 'string' && node1 !== node2 || node1.type !== node2.type;
+    console.log(node1, node2, test);
     return typeof node1 !== typeof node2 || typeof node1 === 'string' && node1 !== node2 || node1.type !== node2.type
   }
 
@@ -111,19 +122,19 @@ function start() {
   }
 
   function updateProp($el, name, newVal, oldVal) {
-    if(!newVal) {
+    if (!newVal) {
       remopveProp($el, name, oldVal)
-    } else if(!oldVal || newVal !== oldVal) {
+    } else if (!oldVal || newVal !== oldVal) {
       setProp($el, name, newVal)
     }
   }
 
   function setProp($el, name, value) {
-    if(isCustomProps(name)) {
+    if (isCustomProps(name)) {
       return;
-    } else if(name === 'className'){
+    } else if (name === 'className') {
       $el.setAttribute('class', value);
-    } else if(typeof value === 'boolean') {
+    } else if (typeof value === 'boolean') {
       $el.setAttribute(name, String(value));
       $el[name] = value;
     } else {
@@ -132,11 +143,11 @@ function start() {
   }
 
   function remopveProp($el, name, value) {
-    if(isCustomProps(name)) {
+    if (isCustomProps(name)) {
       return;
-    } else if(name === 'className'){
+    } else if (name === 'className') {
       $el.removeAttribute('class');
-    } else if(typeof value === 'boolean') {
+    } else if (typeof value === 'boolean') {
       $el.removeAttribute(name);
       $el[name] = false;
     } else {
@@ -154,7 +165,48 @@ function start() {
 
 }
 
-$(document).ready(start);
+// $(document).ready(start);
+$(document).ready(parseStart);
+
+function parseStart() {
+  let play = true, domsRepresentation = [];
+  let playElem = $('#test-parse-play');
+
+  $('.start').click(saveDom);
+  $('.stop').click(() => {
+    play = false;
+  });
+  $('.play').click(PlayDom);
+
+  function saveDom() {
+    const dom = `<div>${$("#test-parse-wraper")[0].innerHTML.trim()}</div>`;
+    let parsedDom = parse(dom);
+    domsRepresentation.push(parsedDom);
+    if(play) {
+      setTimeout(saveDom, 300)
+    } else {
+      console.log(domsRepresentation);
+    }
+  }
+
+  let i = 0;
+  function PlayDom() {
+    console.log(i,  domsRepresentation.length);
+    let newHtml = stringify(domsRepresentation[i]);
+    playElem.html(newHtml);
+
+    if(i < domsRepresentation.length-1) {
+      setTimeout(PlayDom, 300);
+      i++
+    }
+  }
+
+  /*
+   console.time('test');
+   console.timeEnd('test');
+   */
+
+}
 
 /*
  let ref = {

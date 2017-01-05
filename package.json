@@ -46,6 +46,7 @@
     "webpack-dev-server": "^1.16.2"
   },
   "dependencies": {
+    "html-parse-stringify": "^1.0.2",
     "jquery": "^3.1.1"
   },
   "keywords": []

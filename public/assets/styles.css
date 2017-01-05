@@ -2,5 +2,11 @@ body {
   color: grey;
 }
 
+.test-parse-wraper {
+  margin: 50px auto 0 auto;
+  border: 1px solid black;
+  max-width: 80%;
+}
+
 
 /*# sourceMappingURL=styles.css.map*/

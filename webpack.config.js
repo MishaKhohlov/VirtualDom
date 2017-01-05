@@ -28,7 +28,7 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.jsx', '.sass']
+    extensions: ['', '.js', '.jsx', '.sass']
   },
 
   devtool: NODE_ENV === 'development' ? 'source-map' : null,

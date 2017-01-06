@@ -19,6 +19,7 @@ function start() {
         <li>item3</li>
       </ul>
       <input type='checkbox' checked={true}/>
+      <button className="btn" onClick={() => alert(123)}>Click me</button>
     </div>
   );
 
@@ -48,6 +49,7 @@ function start() {
     const $el = document.createElement(node.type);
 
     setProps($el, node.props);
+    addEvent($el, node.props);
 
     node.children.map(createElement).forEach(childEl => $el.appendChild(childEl));
     return $el
@@ -68,6 +70,26 @@ function start() {
     } else {
       $el.setAttribute(name, prop)
     }
+  }
+
+  function addEvent($target, props) {
+    Object.keys(props).forEach(name => {
+      if(isEventProp(name)) {
+        console.log(props[name]);
+        $target.addEventListener(
+          extractEventName(name),
+          props[name]
+        )
+      }
+    })
+  }
+
+  function extractEventName(name) {
+    return name.slice(2).toLowerCase();
+  }
+
+  function isEventProp(name) {
+    return /^on/.test(name)
   }
 
   /* change function, update Element, props, remove Props */
@@ -108,8 +130,6 @@ function start() {
   }
 
   function changed(node1, node2) {
-    const test = typeof node1 !== typeof node2 || typeof node1 === 'string' && node1 !== node2 || node1.type !== node2.type;
-    console.log(node1, node2, test);
     return typeof node1 !== typeof node2 || typeof node1 === 'string' && node1 !== node2 || node1.type !== node2.type
   }
 
@@ -165,8 +185,8 @@ function start() {
 
 }
 
-// $(document).ready(start);
-$(document).ready(parseStart);
+$(document).ready(start);
+// $(document).ready(parseStart);
 
 function parseStart() {
   let play = true, domsRepresentation = [];
@@ -179,6 +199,7 @@ function parseStart() {
   $('.play').click(PlayDom);
 
   function saveDom() {
+    console.time('test');
     const dom = `<div>${$("#test-parse-wraper")[0].innerHTML.trim()}</div>`;
     let parsedDom = parse(dom);
     domsRepresentation.push(parsedDom);
@@ -187,6 +208,7 @@ function parseStart() {
     } else {
       console.log(domsRepresentation);
     }
+    console.timeEnd('test');
   }
 
   let i = 0;
